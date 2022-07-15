@@ -1,4 +1,8 @@
 import { Api } from "https://deno.land/x/grm@v0.1.5/mod.ts";
+import {
+  EditMessageParams,
+  SendMessageParams,
+} from "https://deno.land/x/grm@v0.1.5/src/client/messages.ts";
 
 const entities = {
   "MessageEntityBold": Api.MessageEntityBold,
@@ -26,6 +30,20 @@ class FormattedString implements Stringable {
 
   toString() {
     return this.text;
+  }
+
+  get send(): SendMessageParams {
+    return {
+      message: this.text,
+      formattingEntities: this.entities,
+    };
+  }
+
+  get edit(): Omit<EditMessageParams, "message"> {
+    return {
+      text: this.text,
+      formattingEntities: this.entities,
+    };
   }
 }
 
