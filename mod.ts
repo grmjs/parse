@@ -1,8 +1,8 @@
-import { Api } from "https://deno.land/x/grm@v0.1.5/mod.ts";
+import { Api } from "https://deno.land/x/grm@v0.1.6/mod.ts";
 import {
   EditMessageParams,
   SendMessageParams,
-} from "https://deno.land/x/grm@v0.1.5/src/client/messages.ts";
+} from "https://deno.land/x/grm@v0.1.6/src/client/messages.ts";
 
 const entities = {
   "MessageEntityBold": Api.MessageEntityBold,
