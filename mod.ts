@@ -2,7 +2,7 @@ import { Api } from "https://deno.land/x/grm@0.8.2/mod.ts";
 import {
   EditMessageParams,
   SendMessageParams,
-} from "https://deno.land/x/grm@0.8.2/src/client/types.ts";
+} from "https://deno.land/x/grm@0.8.2/client/types.ts";
 
 const entities = {
   "MessageEntityBold": Api.MessageEntityBold,
